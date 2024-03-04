@@ -1,28 +1,24 @@
-name: Compile LaTeX
+name: Clean Up Auxiliary Files and .DS_Store
 
-on:
+on: 
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
 jobs:
-  compile:
+  cleanup:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+      - name: Check out repository
+        uses: actions/checkout@v2
+      
+      - name: Remove auxiliary LaTeX files and .DS_Store
+        run: |
+          rm -f "Sahand Sorouri - Product Manager.aux"
+          rm -f "Sahand Sorouri - Product Manager.log"
+          rm -f "Sahand Sorouri - Product Manager.out"
+          find . -name '.DS_Store' -type f -delete
 
-    - name: Install LaTeX
-      run: sudo apt-get install -y texlive-full
-
-    - name: Compile LaTeX Document
-      run: pdflatex -interaction=nonstopmode -halt-on-error "Sahand Sorouri - Product Manager.tex"
-
-    - name: Upload PDF
-      uses: actions/upload-artifact@v2
-      with:
-        name: compiled-pdf
-        path: "*.pdf"
+      - name: Commit and push if needed
+        run: |
+          git config --global user.email "action@github
