@@ -1,24 +1,27 @@
-name: Clean Up Auxiliary Files and .DS_Store
+name: Compile LaTeX and Convert to PNG
 
-on: 
+on:
   push:
-    branches:
-      - main
+    paths:
+      - '**.tex'
 
 jobs:
-  cleanup:
+  compile-and-convert:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    
+    - name: Install LaTeX and conversion tools
+      run: sudo apt-get update && sudo apt-get install -y texlive-latex-base ghostscript poppler-utils
       
-      - name: Remove auxiliary LaTeX files and .DS_Store
-        run: |
-          rm -f "Sahand Sorouri - Product Manager.aux"
-          rm -f "Sahand Sorouri - Product Manager.log"
-          rm -f "Sahand Sorouri - Product Manager.out"
-          find . -name '.DS_Store' -type f -delete
-
-      - name: Commit and push if needed
-        run: |
-          git config --global user.email "action@github
+    - name: Compile LaTeX document
+      run: pdflatex -interaction=nonstopmode -halt-on-error "Sahand Sorouri - Product Manager.tex"
+      
+    - name: Convert PDF to PNG
+      run: pdftoppm -png "Sahand Sorouri - Product Manager.pdf" > Resume.png
+      
+    - name: Upload PNG to Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Compiled-PNG
+        path: Resume.png
