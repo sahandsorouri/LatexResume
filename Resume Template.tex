@@ -1,0 +1,210 @@
+
+% Packages
+\documentclass[a4paper,10pt]{article}
+%\documentclass[letterpaper,10pt]{article}
+\usepackage[left=3em,right=3em,top=4em,bottom=3em]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{changepage}
+\usepackage{multicol} % Add this to your preamble
+\usepackage{fontawesome} % For web icons
+\usepackage{tcolorbox}
+\linespread{0.96} % Adjusts line spacing to be tighter
+
+%\usepackage{fontspec}
+%\setmainfont{Calibri} % Replace "Font Name" with your desired font, e.g., Times New Roman
+
+\setlength{\parindent}{0pt}
+% Define custom colors
+\definecolor{hyperlinks}{HTML}{000000}%{6d9eeb}
+\definecolor{grey}{HTML}{555555}
+
+% Setup hyperlink colors
+\hypersetup{
+    colorlinks = true,
+    urlcolor=hyperlinks, % This sets the color of hyperlinks
+}
+
+% Custom commands
+\newcommand{\resumetitle}[1]{{\LARGE\bfseries #1}\vspace{10pt}}
+\newcommand{\sectiontitle}[1]{
+  \begin{tcolorbox}[colback=black, colupper=white, sharp corners, boxrule=0pt, boxsep=3pt, left=0pt, right=0pt, top=1pt, bottom=1pt]
+    \Large\bfseries #1
+  \end{tcolorbox}
+}
+\newcommand{\majorposition}[1]{{\hspace{0pt}\Large\bfseries #1}\vspace{0.1em}}
+\newcommand{\position}[1]{\Large\bfseries #1}\vspace{0.1em}
+\newcommand{\bulletitem}[1]{\item #1\vspace{0.1em}}
+\newcommand{\normaltext}[1]{#1}
+\newcommand{\graytext}[1]{\textcolor{grey}{#1}} % Corrected usage of \textcolor
+\newcommand{\white}[1]{\textcolor{white}{#1}}
+\newcommand{\link}[2]{\href{#1}{\textcolor{hyperlinks}{#2}}} % Corrected for hyperlink color
+\newtcolorbox{mybox}[1][]{
+    colback=gray!10, % Lighter gray background
+    colframe=black, % Black frame
+    colupper=black, % Black text for readability
+    sharp corners,
+    boxrule=0.5pt,
+    left=1pt,
+    right=1pt,
+    top=1pt,
+    bottom=1pt,
+    #1
+}
+\newcommand{\boxedtext}[1]{\begin{mybox}#1\end{mybox}}
+
+% Set itemize spacing
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\begin{document}
+\thispagestyle{empty}
+% Header
+\begin{center}
+\noindent{\Huge\textbf{Sahand Sorouri}}\\
+\vspace{7pt}
+{\textbf{\LARGE{Senior Product Manager}}}\\
+%\href{https://example.com}{Visit our website \faExternalLink{}}
+\normalsize
+\graytext{Dubai, UAE, Open to relocate} $\cdot$ \href{mailto:sahand.sorouri@gmail.com}{sahand.sorouri@gmail.com}
+\\
+\graytext{+971 52 605 8752} $\cdot$ \href{https://linkedin.com/in/sahand-sorouri}{linkedin.com/in/sahand-sorouri \faExternalLink{}} %\href{https://sahand.sorouri.com}{sahand.sorouri.com \faExternalLink{}}
+\end{center}
+\textbf{Customer-Driven Senior Product Manager} with over 6 years of experience driving digital product innovation and monetization in high-growth environments. Specializes in using data-driven insights, rigorous experimentation, and cross-functional collaboration to optimize conversion funnels, retention, and revenue expansion. Proven ability to define actionable product roadmaps that enhance user engagement and subscription growth for both B2B and B2C markets. Passionate about leveraging user psychology and market analytics to deliver compelling, intuitive experiences that drive monetization.
+
+%with 6+ years scaling platforms for 10M+ users, including 0-1 product launches and global market expansion. Proven success in driving engagement (25\%+), retention (20\%+), and revenue growth (50\%+) through user-centric innovation and AI/ML optimization (20\% cost reduction). Adept at leading cross-functional teams, aligning stakeholders, and executing data-driven strategies in fast-paced environments. Passionate about travel/experience marketplaces, with expertise in localization (30\% MENA growth) and building inclusive solutions for diverse audiences.
+%\vspace{5pt}
+%\vspace{3pt}
+% Work Experience
+\sectiontitle{Work Experience}
+{\majorposition{\href{https://nextoptech.org}{Nextop Tech Company \faExternalLink{}} \small{Dubai, UAE}} \hfill\Large{\textbf{\graytext{2024 - 2025 [1 year]}}}}\\
+{\small{\graytext{Cryptocurrency Financial Company, Specializing in Crypto, B2B, B2C, Web \& Mobile}}
+%\small\graytext{Leading cryptocurrency platform in the Middle East with over 2 million transactions monthly, 1 million active users, and 100 partners.}}
+\vspace{2pt}
+\begin{adjustwidth}{0.5cm}{0cm}
+{{\position{Senior Product Manager, }\large{\href{https://topchange.net}{TopChange Product \faExternalLink{} }}}\hfill \large\graytext{May 2024 – Apr 2025 (1y)}}
+\\
+{\small\graytext{Leading Middle Eastern Crypto Platform: 2M+ transactions/month, 1M+ active users}}
+\begin{adjustwidth}{0.5cm}{0cm}
+\normalsize
+\begin{itemize}
+  \bulletitem{Launched \textbf{beginner-friendly crypto trading tools}, increasing revenue by 50\%.}
+  \bulletitem{Reduced onboarding friction by 35\% through simplified UI and real-time analytics.}
+  \bulletitem{Redesigned platform UI/UX based on \textbf{customer feedback loops}, boosting engagement by 25\% and achieving a 4.8/5 user satisfaction score.}
+  \bulletitem{Expanded MENA market presence by 30\% through \textbf{localized tokenomics} (staking, yield farming), attracting 50K+ retail traders.}
+\end{itemize}
+\end{adjustwidth}
+\end{adjustwidth}
+\vspace{8pt}
+{\majorposition{\href{https://snappfood.ir}{SnappFood Company \faExternalLink{}}} \hfill\Large{\textbf{\graytext{2018 - 2023 [5 years]}}}}\\
+{\small{\graytext{eCommerce Marketplace, Food Tech, B2B, B2C, Web \& Mobile: 10M+ monthly transactions, 4M MAU, 80K partners, 2K employees}}}
+%{\small{\graytext{eCommerce Marketplace, Food Tech, B2B, B2C, Web \& Mobile}}\\
+%\small\graytext{Leading food delivery platform: +10 million monthly transactions, 4 million MAU, 80,000 partners, and 2,000 employees.}}
+%\vspace{0.1pt}
+\begin{adjustwidth}{0.5cm}{0cm}
+{{\position{Head of Product, }\large{\href{https://qbar.ir/container}{QBAR Startup \faExternalLink{} }}}{\small{\graytext{(Company’s Initiative)}}}\hfill \large\graytext{Mar 2022 – Aug 2023 (18mo.)}}
+\\
+{\small\graytext{QR-facilitator: 1M+ monthly visitors, 3K+ B2B subscriptions}}
+\begin{adjustwidth}{0.5cm}{0cm}
+\normalsize
+\begin{itemize}
+  \bulletitem{Built and led a 20-member cross-functional team, reducing time-to-market by 25\% through \textbf{agile workflows} and weekly user feedback.}
+  \bulletitem{Automated CRM processes to slash B2B partner onboarding from 30 days to 3 days, improving \textbf{partner satisfaction (NPS +20)}.}
+  \bulletitem{Secured \$0.5M+ funding for nationwide expansion by aligning stakeholders on a \textbf{user-centric roadmap}, scaling to 15 cities with flat operational costs.}
+%  \bulletitem{Improved user experience metrics up to 50\% by implementing user-centered design principles, including A/B testing, user research, and feedback loops with more than 100 partners.}
+\end{itemize}
+\end{adjustwidth}
+\vspace{3pt}
+{{\position{Senior Product Manager}}\hfill {\large\graytext{Sep 2020 – Feb 2022 (18mo.)}}}
+\\
+{\small\graytext{Spearheaded key strategic projects, working directly with SnappFood's Chairman of the Board}}
+\normalsize
+\begin{adjustwidth}{0.5cm}{0cm}
+\begin{itemize}
+  \bulletitem{Built a Growth Product Strategy team (5 members) that accelerated KPI achievement by 60\%.}
+  \bulletitem{Launched \textbf{Cash-on-Delivery SaaS} for unbanked users, increasing transaction success rates by 5\% and retention by 20\% (4.6/5 satisfaction score).}
+  \bulletitem{Co-designed Iraqi delivery platform (10K+ monthly orders), integrating cash payments and regional cuisine.}
+  \bulletitem{\textbf{Designed delivery price segmentation} using AI, reducing annual logistics costs by 20\% while maintaining service quality.}
+%   \bulletitem{Introduced an advertising in-app product launch plan, allowing vendors to bid on service-areas to promote offerings on the SnappFood customer app.}
+
+\end{itemize}
+\end{adjustwidth}
+\vspace{3pt}
+
+{{\position{Product Manager}}\hfill \large\graytext{Sep 2018 – Aug 2020 (2ys)}}
+\normalsize
+\begin{adjustwidth}{0.5cm}{0cm}
+\begin{itemize}
+%  \bulletitem{Led integration of SnappShop QCommerce platform into SnappFood, achieving a successful launch with 200,000 monthly orders in 2022.}
+%  \bulletitem{Launched SnappShop’s logistics platform (Shopex), reducing operational costs by 15\% and enabling \textbf{30\% faster deliveries} through hub optimization.}
+  \bulletitem{Automated seller onboarding using \textbf{ML algorithms}, unifying 60K+ product listings (30\% faster search) and slashing onboarding time from 30 days to 1 week.}
+%   \bulletitem{Initiated a Growth Product Strategy team of 5 people, creating infrastructure and monitoring business service KPIs, OKRs, and targets, resulting in achieving targets 60\% closer within the first year.}
+  \bulletitem{Expanded online supermarkets to 10 cities during COVID-19, serving \textbf{500K+ households} (40\% low-income) via AI-driven route optimization, cutting delivery costs by 15\%.}
+ \bulletitem{Introduced in-app advertising product, enabling vendors to bid on service-area promotions, driving a \textbf{15\% increase in vendor engagement}.}
+% \bulletitem{Designed a new delivery price segmentation feature, reducing delivery costs by up to 20\% annually.}
+
+\end{itemize}
+\end{adjustwidth}
+\vspace{3pt}
+
+%{{\position{Associate Product Manager}}\hfill \large\graytext{Sep 2018 – Feb 2020}}
+%\normalsize
+%\begin{adjustwidth}{0.5cm}{0cm}
+%\begin{itemize}
+ % \bulletitem{Initiated a Growth Product Strategy team of 5 people, creating infrastructure and monitoring business service KPIs, OKRs, and targets, resulting in achieving targets 60\% closer within the first year.}
+%  \bulletitem{Expanded SnappFood’s online supermarkets from 200 in Tehran to double that number in 10 cities within just one month during the pandemic, leading to a 20\% increase in daily orders.}
+%  \bulletitem{Designed a new delivery price segmentation feature, reducing delivery costs by up to 20\% annually.}
+%  \bulletitem{Introduced an advertising in-app product launch plan, allowing vendors to bid on service-areas to promote offerings on the SnappFood customer app.}
+%\end{itemize}
+%\end{adjustwidth}
+\end{adjustwidth}
+
+% Adjusting Education, Interests, and Case Studies into a three-column layout
+{\boxedtext{\textbf{Customer-Centric Skills:} User Journey Mapping · VoC Analysis · UX Research · User-Centered Design\\
+\textbf{Technical Expertise:} Blockchain (Solidity, MetaMask) · DeFi · Smart Contracts · SQL/Python · Agile · Jira/Figma\\
+\textbf{Business Leadership:} Product Lifecycle · Roadmap Development · Stakeholder Management · Compliance Frameworks}}
+
+\vspace{5pt}
+\begin{center}
+\noindent\begin{minipage}{0.32\textwidth}
+  \sectiontitle{Education}
+  Sharif University of Technology (2018)\\
+  Bachelor of Electrical Engineering
+  %a Minor in CS \hfill (2013 - 2018)
+  \\
+  \graytext{{Ranked Top 0.003\%} Nationally (9th out of 300,000+ applicants) · Coursework: Product Design, Business Analytics} 
+\end{minipage}%
+  \hfill
+  \begin{minipage}{0.32\textwidth}
+  \sectiontitle{Interests}
+  Artificial Intelligence
+  \\
+  Chess and Strategic Games
+  \\
+  Bouldering (Rock Climbing)
+  \\
+  Global Market Trend Analysis
+  \\
+  Community Leadership \& Nonprofits
+  \end{minipage}%
+  \hfill
+\begin{minipage}{0.32\textwidth}
+  \sectiontitle{Certificates}
+  \href{https://www.credly.com/badges/d370d9c3-e34d-46f4-a4bf-ef5c8fc42cd1/linked_in_profile}{AI for Product Management \faExternalLink{}}\\
+  \href{https://www.linkedin.com/learning/certificates/870c0fd2f066e7b8503e479c2490fafd5882f912ff675c28901dc0718ee39ed9}{Aha! Product Management \faExternalLink{}}\\
+%  Active \href{https://adplist.org/certifications/144451}{ADPList Mentee \faExternalLink{}} \\
+  DeFi \& Tokenomics (In Progress)\\
+  Data Analysis \href{https://www.linkedin.com/learning/certificates/ffca4d550b1e4b91b668313ff2bf815beb1a5e1ab6fd508e4ed9188aafe2db28?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BfdmfS%2FgnTKqHBLUxxTyUPQ%3D%3D}{\faExternalLink{}}, \href{https://www.linkedin.com/learning/certificates/cb5129fee28b086cddf3d21cbfeed021530abfbebfa7fa4a8f8964d9b7aa3c32?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BfdmfS%2FgnTKqHBLUxxTyUPQ%3D%3D}{\faExternalLink{}}\\
+  Statistics \href{https://https://www.linkedin.com/learning/certificates/b30b4d5c833c3a100d3be45f7897425ec2152b81b473b240359e358ce2c128d8}{\faExternalLink{}}, \href{https://www.linkedin.com/learning/certificates/1d347521f9fc7171d89c71a1b1944ce84c5e74870d3e73956425be407dd61258}{\faExternalLink{}}, \href{https://www.linkedin.com/learning/certificates/6422926178665f0c37e9fd93754684319febdbfa2a3b75db1f243990005333f6}{\faExternalLink{}}\end{minipage}
+
+%  \sectiontitle{Case Studies}
+%  Startup Budget Constraints \\
+%  Overcoming Sales Targets \\
+%  Adaptability Lessons Learned \\
+%  Automating Vendor Onboarding \\
+%  International Successful Launch
+\end{center}
+\end{document}
+
